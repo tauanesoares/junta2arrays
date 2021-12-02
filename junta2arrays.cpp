@@ -11,33 +11,33 @@ entregar no github
 using namespace std;
 
 class vetor{ //montamos a classe vetor
-	int vet1[5];  //declaramos as variaveis de vetor que v„o ser usadas no metodojunta
-	int vet2[5];
-	int vet3[10];
-	int i, j, n, temp;
+	int vet1[6];  //declaramos as variaveis de vetor que v√£o ser usadas no metodojunta
+	int vet2[6];
+	int vet3[12];
+	int i, j, n;
 	public:
-		metodojunta(int vet3[10]);	//declaraÁ„o do metodo junta
+		metodojunta(int vet3[12]);	//declara√ß√£o do metodo junta
 };
 
-int vetor::metodojunta(int vet3[10]){  //processo do metodo junta
-	for(i = 0; i < 5; i++){
+int vetor::metodojunta(int vet3[12]){  //processo do metodo junta
+	for(i = 0; i < 6; i++){
 		cout << "Digite os valores do array 1:" << endl;
 		cin >> vet1[i];}
-			for(j = 0; j < 5; j++){
+			for(j = 0; j < 6; j++){
 		cout << "Digite os valores do array 2:" << endl;
 		cin >> vet2[j];	}		
 
 	memcpy( vet3, vet1, sizeof(vet1) );
-	memcpy( vet3 + 5, vet2, sizeof(vet2) );
+	memcpy( vet3 + 6, vet2, sizeof(vet2) );
 	
-	for(n = 0; n <10; n++){
+	for(n = 0; n <12; n++){
 		cout << "terceiro array: "<< vet3[n] << endl;
 	}
 }
 
 int main()
 {
-	int vet3[11];
+	int vet3[12];
 	
 	vetor vetor3;
 	vetor3.metodojunta(vet3);
